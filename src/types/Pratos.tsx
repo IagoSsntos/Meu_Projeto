@@ -1,4 +1,4 @@
-export interface Pratos {
+export interface pratos {
     id: string | undefined;
     nome: string;
     descricao: string;

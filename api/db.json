@@ -1,88 +1,58 @@
-[
-  {
-    "nome": "Pepperoni",
-    "categorias": [
-      "salgado",
-      "pizza"
-    ],
-    "descricao": "Pepperoni artesanal, queijo premium e massa crocante. Sabor marcante em cada fatia.",
-    "imagens": [
-      "pizza-de-pepperoni-caseira-portal-minha-receita.webp"
-    ],
-    "id": "pz01",
-    "preco": 84.99,
-    "peso": null
-  },
-  {
-    "nome": "Brigadeiro",
-    "categorias": [
-      "doce",
-      "pizza"
-    ],
-    "descricao": "Brigadeiro cremoso, base crocante e toque especial de granulado. Doçura e charme que encantam a cada mordida.",
-    "imagens": [
-      "brigadeiro.png"
-    ],
-    "id": "pz02",
-    "preco": 87.99,
-    "peso": null
-  },
-  {
-    "nome": "Sensação",
-    "categorias": [
-      "doce",
-      "pizza",
-      "chocolate"
-    ],
-    "descricao": "Chocolate meio amargo rico, base crocante e M&M's selecionados. Delicadeza e sabor em cada fatia.",
-    "imagens": [
-      "Sensação.png"
-    ],
-    "id": "pz03",
-    "preco": 87.99,
-    "peso": null
-  },
-  {
-    "nome": "Quatro Queijo",
-    "categorias": [
-      "salgado",
-      "pizza"
-    ],
-    "descricao": "Queijos selecionados, cremosos e equilibrados sobre massa crocante. Sofisticação a cada fatia.",
-    "imagens": [
-      "quatro-queijo 1.png"
-    ],
-    "id": "pz04",
-    "preco": 84.99,
-    "peso": null
-  },
-  {
-    "nome": "Frango",
-    "categorias": [
-      "salgado",
-      "pizza"
-    ],
-    "descricao": "Queijos selecionados, cremosos e equilibrados sobre massa crocante. Sofisticação a cada fatia.",
-    "imagens": [
-      "Frango.png"
-    ],
-    "id": "pz05",
-    "preco": 84.99,
-    "peso": null
-  },
-  {
-    "nome": "Chocolate com M&M's",
-    "categorias": [
-      "doce",
-      "pizza",
-      "chocolate"
-    ],
-    "descricao": "Chocolate meio amargo intenso, base crocante e M&M’s especiais. Elegância e sabor em cada pedaço.",
-    "imagens": [
-      "Chocolate com M&Ms.png"
-    ],
-    "id": "pz06",
-    "preco": 87.99,
-    "peso": null
-  }
-]
+{
+  "pizzas": [
+    {
+      "nome": "Pepperoni",
+      "categorias": ["salgado", "pizza"],
+      "descricao": "Pepperoni artesanal, queijo premium e massa crocante. Sabor marcante em cada fatia.",
+      "imagens": ["pizza-de-pepperoni-caseira-portal-minha-receita.webp"],
+      "id": "pz01",
+      "preco": 84.99,
+      "peso": null
+    },
+    {
+      "nome": "Brigadeiro",
+      "categorias": ["doce", "pizza"],
+      "descricao": "Brigadeiro cremoso, base crocante e toque especial de granulado. Doçura e charme que encantam a cada mordida.",
+      "imagens": ["brigadeiro.png"],
+      "id": "pz02",
+      "preco": 87.99,
+      "peso": null
+    },
+    {
+      "nome": "Sensação",
+      "categorias": ["doce", "pizza", "chocolate"],
+      "descricao": "Chocolate meio amargo rico, base crocante e M&M's selecionados. Delicadeza e sabor em cada fatia.",
+      "imagens": ["Sensação.png"],
+      "id": "pz03",
+      "preco": 87.99,
+      "peso": null
+    },
+    {
+      "nome": "Quatro Queijo",
+      "categorias": ["salgado", "pizza"],
+      "descricao": "Queijos selecionados, cremosos e equilibrados sobre massa crocante. Sofisticação a cada fatia.",
+      "imagens": ["quatro-queijo 1.png"],
+      "id": "pz04",
+      "preco": 84.99,
+      "peso": null
+    },
+    {
+      "nome": "Frango",
+      "categorias": ["salgado", "pizza"],
+      "descricao": "Queijos selecionados, cremosos e equilibrados sobre massa crocante. Sofisticação a cada fatia.",
+      "imagens": ["Frango.png"],
+      "id": "pz05",
+      "preco": 84.99,
+      "peso": null
+    },
+    {
+      "nome": "Chocolate com M&M's",
+      "categorias": ["doce", "pizza", "chocolate"],
+      "descricao": "Chocolate meio amargo intenso, base crocante e M&M’s especiais. Elegância e sabor em cada pedaço.",
+      "imagens": ["Chocolate com M&Ms.png"],
+      "id": "pz06",
+      "preco": 87.99,
+      "peso": null
+    }
+  ]
+}

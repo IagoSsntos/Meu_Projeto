@@ -9,24 +9,26 @@ import card4 from '../../assets/imgs/quatro-queijo 1.png'
 import card5 from '../../assets/imgs/Frango.png'
 import card6 from '../../assets/imgs/Chocolate com M&Ms.png'
 import { useEffect, useState } from 'react'
+import { getPratos } from '../../services/pratosServices'
+import type { pratos } from '../../types/Pratos'
 
 export default function Pratos() {
-       
-        const [pratos, setPratos] = useState<Pratos[]>([]);
 
-        const fetchPratos = async () => {
-            try{
-                const dados = await getPratos();
-                console.log("Lista de pratos vindo da Api: ", dados);
-                setPratos(dados);
-            }catch (error) {
-                console.error("erro ao execultar getPratos", error);
-            }
+    const [pratos, setPratos] = useState<pratos[]>([]);
+
+    const fetchPratos = async () => {
+        try {
+            const dados = await getPratos();
+            console.log("Lista de pratos vindo da Api: ", dados);
+            setPratos(dados);
+        } catch (error) {
+            console.error("erro ao execultar getPratos: ", error);
         }
+    }
 
-        useEffect(() => {
-            fetchBolos();
-        },[])
+    useEffect(() => {
+        fetchPratos();
+    }, [])
     return (
         <main>
 
@@ -63,51 +65,17 @@ export default function Pratos() {
 
             <section className="cards" >
 
+                {
+                    pratos.map((p: pratos) => (
 
-                <div className="card 1">
-                    <img src={card1} alt="pizza com brigadeiro" />
-                    <h2>Pepperoni</h2>
-                    <p>Pepperoni artesanal, queijo premium e massa crocante. Sabor marcante em cada fatia.</p>
-                    <span>R$ 84,99</span>
-                </div>
-
-
-                <div className="card 2">
-                    <img src={card2} alt="pizza com brigadeiro" />
-                    <h2>Brigadeiro</h2>
-                    <p>Brigadeiro cremoso, base crocante e toque especial de granulado. Doçura e charme que encantam a cada mordida.</p>
-                    <span>R$ 87,99</span>
-                </div>
-
-
-                <div className="card 3">
-                    <img src={card3} alt="pizza com brigadeiro" />
-                    <h2>Sensação</h2>
-                    <p>Chocolate meio amargo rico, base crocante e M&M's selecionados. Delicadeza e sabor em cada fatia.</p>
-                    <span>R$ 87,99</span>
-                </div>
-
-
-                <div className="card 4">
-                    <img src={card4} alt="pizza com brigadeiro" />
-                    <h2>Quatro queijo</h2>
-                    <p>Queijos selecionados, cremosos e equilibrados sobre massa crocante. Sofisticação a cada fatia.</p>
-                    <span>R$ 84,99</span>
-                </div>
-
-                <div className="card 5">
-                    <img src={card5} alt="pizza com brigadeiro" />
-                    <h2>Frango</h2>
-                    <p>Queijos selecionados, cremosos e equilibrados sobre massa crocante. Sofisticação a cada fatia.</p>
-                    <span>R$ 84,99</span>
-                </div>
-
-                <div className="card 6">
-                    <img src={card6} alt="pizza com brigadeiro" />
-                    <h2> Chocolate com M&M's</h2>
-                    <p>Chocolate meio amargo intenso, base crocante e M&M’s especiais. Elegância e sabor em cada pedaço.</p>
-                    <span>R$ 87,99</span>
-                </div>
+                        <div className="card 1">
+                            <img src={`http://localhost:3000/static/${p.imagens[0]}`} alt={"imagem do prato" + p.descricao} />
+                            <h2>{p.nome}</h2>
+                            <p>{p.descricao}</p>
+                            <span>{p.preco}</span>
+                        </div>
+                    ))
+                }
 
 
             </section>
